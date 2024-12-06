@@ -35,7 +35,7 @@ const WeekForecast = ({ data }: WeekForecastProps) => {
           degree={parseFloat(
             ((day.day.maxtemp_c + day.day.mintemp_c) / 2).toFixed()
           )}
-          image={day.day.condition.text}
+          image={day.day.condition.text.toLowerCase()}
           day={new Date(day.date).toLocaleString("en-US", { weekday: "short" })}
           highDegree={parseFloat(day.day.maxtemp_c.toFixed())}
           lowDegree={parseFloat(day.day.mintemp_c.toFixed())}
