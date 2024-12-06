@@ -23,26 +23,26 @@ const WeatherCard: React.FC<WeatherCardProps> = ({
       const conditionText = image.toLowerCase(); // Ensure the image name is in lowercase for consistency
 
       if (conditionText.includes("clear") || conditionText.includes("sunny")) {
-        setGeneralCondition("Clear");
+        setGeneralCondition("clear");
       } else if (
         conditionText.includes("cloudy") ||
         conditionText.includes("overcast") ||
         conditionText.includes("fog") ||
         conditionText.includes("mist")
       ) {
-        setGeneralCondition("Cloudy");
+        setGeneralCondition("cloudy");
       } else if (
         conditionText.includes("rain") ||
         conditionText.includes("drizzle") ||
         conditionText.includes("shower")
       ) {
-        setGeneralCondition("Rainy");
+        setGeneralCondition("rainy");
       } else if (
         conditionText.includes("snow") ||
         conditionText.includes("sleet") ||
         conditionText.includes("blizzard")
       ) {
-        setGeneralCondition("Snowy");
+        setGeneralCondition("snowy");
       } else {
         setGeneralCondition("Unknown");
       }
